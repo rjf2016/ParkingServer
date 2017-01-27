@@ -1,5 +1,6 @@
-// Dependencies
-// =============================================================
+// =====================
+//    Dependencies
+// =====================
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -8,15 +9,15 @@ var mongoose = require("mongoose");
 
 // Require 'saved' Schema
 var Markers = require("./models/saved");
-
 var request = require("request");
 var Promise = require("bluebird");
 
 mongoose.Promise = Promise;
 
+// ===========================
+//   Sets up the Express App
+// ===========================
 
-// Sets up the Express App
-// =============================================================
 var app = express();
 var PORT = Number(process.env.PORT || 3000);
 
@@ -29,11 +30,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-
-//mongoose.Promise = global.Promise;
-
-// MongoDB Configuration configuration (Change this URL to your own DB)
-mongoose.connect("mongodb://localhost/parkingserverapp");
+// MongoDB Configuration: Uses Mlab so it can be hosted on Heroku
+mongoose.connect("mongodb://parkingdb:parkingdb@ds019826.mlab.com:19826/heroku_pz7cbd0t");
 var db = mongoose.connection;
 
 db.on("error", function(err) {
@@ -45,7 +43,7 @@ db.once("open", function() {
 });
 
 // ====================
-// 		ROUTER 
+// 		   ROUTER 
 // ====================
 
 // This is the route we will send GET requests to retrieve saved markers.

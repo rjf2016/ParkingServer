@@ -1,0 +1,27 @@
+{
+  "name": "parkingappserver",
+  "version": "1.0.0",
+  "description": "Server-side api for saving geo-location data from parking app.",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "express": "^4.14.0",
+    "path": "^0.12.7",
+    "body-parser": "^1.15.2",
+    "mongoose": "^4.5.1",
+    "morgan": "^1.7.0",
+    "request": "2.69.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "parkingapp",
+    "parkingappserver",
+    "parking"
+  ],
+  "author": "Rick Fahey",
+  "license": "ISC"
+}

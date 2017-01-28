@@ -1,7 +1,7 @@
 # Parking App Back End
 [Parking App](https://github.com/Monkman06/ParkingApp) 's server built using **NodeJS/Express**, backed by **MongoDB** database.
 
-All hosted on Heroku. [Click here](https://parkingserver.herokuapp.com/api/markers) to see data being passed by Parking App using React Natives 'Fetch' method, and then being saved to the database.
+All hosted on Heroku. [Click here](https://parkingserver.herokuapp.com/api/markers) to see data being passed real-time from the Parking App, (using React Natives 'Fetch' method), then being saved to the database.
 
 -----------------
 
